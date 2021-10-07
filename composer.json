@@ -1,0 +1,7 @@
+{
+	"require": {
+		"maknz/slack": "^1.7",
+		"ak86/slash-command-request-validator-for-slack": "^1.0",
+		"ak86/php-cloudflare-api-client": "^1.0"
+	}
+}
