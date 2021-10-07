@@ -32,14 +32,14 @@ try {
 	{
 		throw new \Exception('Invalid Domain Name Syntax. Please check the rules and try again!');
 	}
-	else if(!in_array($domain, $config['cloudflare']['sites']))
+	else if(!in_array($domain, $config['domains']))
 	{
 		throw new \Exception($domain.' is not present in our cloudflare account! If you are sure this is one of our domains, please contact Administrator.');
 	}
 	else
 	{
 		// The domain is good. We can initialize CloudflareApiClient
-		$cfapi = new CloudflareApiClient($config['cloudflare']['api_token']);
+		$cfapi = new CloudflareApiClient($config['api_token']);
 
 		// initialize a var to hold the response with a default message
 		$msg = 'Something went wrong!';
